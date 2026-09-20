@@ -1,0 +1,151 @@
+{
+  "hero": {
+    "name": "Eclipse",
+    "subtitle": "Developer & Community Operations",
+    "description": "I build websites, Discord infrastructure, and digital experiences for online communities and organizations. Focused on creating clean, functional systems that help communities grow.",
+    "status": "Available for opportunities",
+    "focus": "Web Development",
+    "specialty": "Community Infrastructure",
+    "based": "Remote"
+  },
+  "about": {
+    "intro1": "I work with web development and online communities, building things that matter and helping communities run smoothly behind the scenes.",
+    "intro2": "My focus is on creating clean, functional experiences with modern web technologies. I'm continuously improving my technical skills and learning how to build better software.",
+    "intro3": "I also work with Discord communities and community operations — building infrastructure, managing technical systems, and making sure everything runs as it should.",
+    "skills": {
+      "development": ["HTML", "CSS", "JavaScript", "Learning Python"],
+      "community": ["Discord", "Community Management", "Moderation", "Staff Operations", "Community Infrastructure"]
+    }
+  },
+  "projects": [
+    {
+      "id": "strive-scrims",
+      "title": "Strive Scrims",
+      "description": "An ongoing Fortnite scrim and community project involving web development, Discord infrastructure, scrim organization, and custom technical systems.",
+      "status": "active",
+      "featured": true,
+      "areas": ["Web Development", "Discord Infrastructure", "Community Operations", "Event Organization"],
+      "technologies": ["Next.js", "React", "Discord", "Community Management"]
+    },
+    {
+      "id": "void-scrims",
+      "title": "Void Scrims",
+      "description": "Competitive Fortnite scrim organization and management.",
+      "status": "past",
+      "featured": false,
+      "role": "Staff",
+      "areas": [],
+      "technologies": []
+    },
+    {
+      "id": "artix-scrims",
+      "title": "Artix Scrims",
+      "description": "Community-focused Fortnite scrim events and coordination.",
+      "status": "past",
+      "featured": false,
+      "role": "Staff",
+      "areas": [],
+      "technologies": []
+    },
+    {
+      "id": "vitals",
+      "title": "Vitals",
+      "description": "Staffed for competitive gaming community operations.",
+      "status": "past",
+      "featured": false,
+      "role": "Staff",
+      "areas": [],
+      "technologies": []
+    },
+    {
+      "id": "manu",
+      "title": "Manu",
+      "description": "Community management and staff operations.",
+      "status": "past",
+      "featured": false,
+      "role": "Staff",
+      "areas": [],
+      "technologies": []
+    },
+    {
+      "id": "elite-tokens",
+      "title": "Elite Tokens",
+      "description": "Discord community operations and management.",
+      "status": "past",
+      "featured": false,
+      "role": "Staff",
+      "areas": [],
+      "technologies": []
+    },
+    {
+      "id": "na-opens",
+      "title": "NA Opens",
+      "description": "North American competitive tournament operations.",
+      "status": "past",
+      "featured": false,
+      "role": "Staff",
+      "areas": [],
+      "technologies": []
+    }
+  ],
+  "experience": [
+    {
+      "id": "strive-scrims",
+      "title": "Strive Scrims",
+      "role": "Development & Community Operations",
+      "status": "Ongoing",
+      "description": "Building and maintaining website infrastructure, Discord systems, and community operations for a Fortnite scrim community.",
+      "responsibilities": [
+        "Developed and maintain web platform for the community",
+        "Built and manage Discord infrastructure and automation systems",
+        "Organized and coordinated competitive scrim events",
+        "Created technical systems for community management and operations"
+      ]
+    },
+    {
+      "id": "community-management",
+      "title": "Community Management",
+      "role": "Discord Communities & Operations",
+      "status": "Various Projects",
+      "description": "Worked with multiple Discord communities managing operations, moderation, and staff coordination.",
+      "responsibilities": [
+        "Community moderation and staff management",
+        "Discord server setup and configuration",
+        "Bot implementation and automation",
+        "Behind-the-scenes operations and coordination"
+      ]
+    },
+    {
+      "id": "web-development",
+      "title": "Web Development",
+      "role": "Personal & Community Projects",
+      "status": "Ongoing",
+      "description": "Building web applications and learning modern development practices through hands-on projects.",
+      "responsibilities": [
+        "Frontend development with HTML, CSS, and JavaScript",
+        "Building responsive and functional web interfaces",
+        "Learning Python for backend development",
+        "Version control and collaboration with Git"
+      ]
+    },
+    {
+      "id": "content-management",
+      "title": "Content Management",
+      "role": "Online Communities & Social Platforms",
+      "status": "Various Projects",
+      "description": "Managing and producing content for online communities and social platforms, maintaining brand presence and audience engagement.",
+      "responsibilities": [
+        "Planning and scheduling content across platforms",
+        "Managing community presence and social media accounts",
+        "Creating announcements, updates, and community posts",
+        "Maintaining consistent tone and brand identity"
+      ]
+    }
+  ],
+  "contact": {
+    "email": "eclipsethedeveloper@gmail.com",
+    "discord": "Eclipsefv1x",
+    "github": "eclipsethedev",
+    "twitter": "Eclipsefv1"
+  }
+}
