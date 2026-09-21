@@ -115,8 +115,8 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
               {[
                 { label: 'Focus', value: h.focus },
-                { label: 'Specialty', value: h.specialty },
-                { label: 'Based', value: h.based },
+                { label: 'Building', value: h.specialty },
+                { label: 'Also Work With', value: h.also },
               ].map((item, index) => (
                 <motion.div
                   key={item.label}

@@ -104,8 +104,8 @@ export default function ProjectsPage() {
         {mini.length > 0 && (
           <AnimatedSection>
             <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={viewportConfig} transition={{ duration: 0.5 }} className="mb-12">
-              <h2 className="text-2xl font-semibold mb-2">Other Projects</h2>
-              <p className="text-neutral-400">Staff positions and community involvement</p>
+              <h2 className="text-2xl font-semibold mb-2">Additional Experience</h2>
+              <p className="text-neutral-400">Other projects and community work</p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -28,8 +28,7 @@ export default function AboutPage() {
         <AnimatedSection className="mb-32 max-w-3xl">
           <motion.div variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.2 } } }} initial="hidden" whileInView="visible" viewport={viewportConfig}>
             <motion.p className="text-xl md:text-2xl text-neutral-300 leading-relaxed mb-6" variants={staggerItem}>{a.intro1}</motion.p>
-            <motion.p className="text-lg text-neutral-400 leading-relaxed mb-6" variants={staggerItem}>{a.intro2}</motion.p>
-            <motion.p className="text-lg text-neutral-400 leading-relaxed" variants={staggerItem}>{a.intro3}</motion.p>
+            <motion.p className="text-lg text-neutral-400 leading-relaxed" variants={staggerItem}>{a.intro2}</motion.p>
           </motion.div>
         </AnimatedSection>
 
@@ -40,10 +39,10 @@ export default function AboutPage() {
           </motion.h2>
           <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12" variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }} initial="hidden" whileInView="visible" viewport={viewportConfig}>
             {[
-              { title: 'Web Development', description: 'Building web applications with HTML, CSS, and JavaScript. Learning Python to expand my technical capabilities.' },
-              { title: 'Discord Infrastructure', description: 'Creating and managing Discord bots, automation systems, and community infrastructure for gaming and online communities.' },
-              { title: 'Technical Projects', description: 'Working on various technical systems, from web platforms to automation tools, with a focus on practical solutions.' },
-              { title: 'Community Operations', description: 'Managing community operations, moderation systems, and staff coordination for online communities.' },
+              { title: 'Web Development', description: 'Building websites and web applications with modern web technologies.' },
+              { title: 'Technical Projects', description: 'Turning ideas into functional tools, interfaces, and systems.' },
+              { title: 'Discord Infrastructure', description: 'Working with bots, automation, integrations, and server infrastructure.' },
+              { title: 'Community Operations', description: 'Supporting online communities and helping keep their systems organized.' },
             ].map((item) => (
               <motion.div key={item.title} variants={staggerItem} whileHover={{ x: 4 }} transition={{ duration: 0.3 }}>
                 <h3 className="text-lg font-medium mb-3">{item.title}</h3>
@@ -61,7 +60,8 @@ export default function AboutPage() {
           <div className="space-y-12">
             {[
               { category: 'Development', items: a.skills.development },
-              { category: 'Community & Operations', items: a.skills.community },
+              { category: 'Tools', items: a.skills.tools },
+              { category: 'Other', items: a.skills.other },
             ].map((skillSet, setIndex) => (
               <motion.div key={skillSet.category} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={viewportConfig} transition={{ duration: 0.5, delay: setIndex * 0.1 }}>
                 <div className="text-sm text-neutral-500 mb-4 uppercase tracking-wider">{skillSet.category}</div>

@@ -24,7 +24,7 @@ export default function Footer() {
             transition={{ duration: 0.6 }}
           >
             <div className="font-semibold text-white mb-1">Eclipse</div>
-            <div className="text-sm text-neutral-500">Developer / Community Operations</div>
+            <div className="text-sm text-neutral-500">Developer</div>
           </motion.div>
 
           {/* Links */}
