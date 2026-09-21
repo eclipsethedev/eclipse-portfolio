@@ -181,13 +181,11 @@ export default function MusicPlayer() {
                   </motion.svg>
                 )}
               </AnimatePresence>
-              {/* Pulse ring when playing */}
+              {/* Subtle glow when playing */}
               {isPlaying && (
                 <motion.div
-                  className="absolute inset-0 rounded-full border border-blue-400"
-                  initial={{ scale: 1, opacity: 0.6 }}
-                  animate={{ scale: 1.7, opacity: 0 }}
-                  transition={{ duration: 1.4, repeat: Infinity, ease: 'easeOut' }}
+                  className="absolute inset-0 rounded-full"
+                  style={{ boxShadow: '0 0 12px rgba(255,255,255,0.25)' }}
                 />
               )}
             </motion.button>
