@@ -113,36 +113,45 @@ export default function MusicPlayer() {
     >
       <motion.div
         className="bg-neutral-950 border border-neutral-700 shadow-2xl overflow-hidden"
-        animate={{ width: expanded ? 300 : 'auto' }}
+        animate={{ width: expanded ? 300 : 260 }}
         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
         style={{ borderRadius: 12 }}
       >
+        {/* Expand tab at the top */}
+        <motion.button
+          onClick={() => setExpanded(!expanded)}
+          className="w-full flex items-center justify-center gap-1.5 py-1.5 border-b border-neutral-800 hover:bg-neutral-900 transition-colors group"
+          whileTap={{ scale: 0.98 }}
+          aria-label="Expand player"
+        >
+          <motion.svg
+            className="w-3 h-3 text-neutral-500 group-hover:text-white transition-colors"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            animate={{ rotate: expanded ? 180 : 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
+          </motion.svg>
+          <span className="text-xs text-neutral-500 group-hover:text-white transition-colors">
+            {expanded ? 'collapse' : 'expand'}
+          </span>
+        </motion.button>
+
         {/* Main bar */}
         <div className="flex items-center gap-3 px-4 py-3">
-          {/* Visualizer bars when playing */}
-          <motion.button
-            onClick={() => setExpanded(!expanded)}
-            className="shrink-0 flex items-end gap-px h-5 w-5 cursor-pointer"
-            aria-label="Toggle player"
-            whileTap={{ scale: 0.9 }}
-          >
+          {/* Equalizer visualizer — display only */}
+          <div className="shrink-0 flex items-end gap-px h-5 w-5">
             {[0.4, 1, 0.6, 0.9, 0.5].map((h, i) => (
               <motion.div
                 key={i}
                 className={`w-1 rounded-sm ${isPlaying ? 'bg-blue-400' : 'bg-neutral-600'}`}
-                animate={isPlaying ? {
-                  scaleY: [h, 1, 0.3, 0.8, h],
-                } : { scaleY: 0.3 }}
-                transition={isPlaying ? {
-                  duration: 0.8,
-                  repeat: Infinity,
-                  delay: i * 0.1,
-                  ease: 'easeInOut',
-                } : { duration: 0.3 }}
+                animate={isPlaying ? { scaleY: [h, 1, 0.3, 0.8, h] } : { scaleY: 0.3 }}
+                transition={isPlaying ? { duration: 0.8, repeat: Infinity, delay: i * 0.1, ease: 'easeInOut' } : { duration: 0.3 }}
                 style={{ height: 20, originY: 1 }}
               />
             ))}
-          </motion.button>
+          </div>
 
           {/* Track info */}
           <div className="flex flex-col min-w-0" style={{ maxWidth: expanded ? 160 : 100 }}>
