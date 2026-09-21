@@ -3,15 +3,17 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MusicPlayer from "@/components/MusicPlayer";
+import ScrollProgress from "@/components/ScrollProgress";
+import PageTransitionWrapper from "@/components/PageTransitionWrapper";
 
 export const metadata: Metadata = {
-  title: "Eclipse — Developer & Community Operations",
-  description: "Developer building web experiences and working with online communities. Skilled in web development, Discord infrastructure, and community operations.",
-  keywords: ["developer", "web development", "community management", "Discord", "React", "Next.js"],
+  title: "Eclipse — Developer",
+  description: "Developer building websites, web applications, and technical systems for online projects.",
+  keywords: ["developer", "web development", "Next.js", "React", "Discord"],
   authors: [{ name: "Eclipse" }],
   openGraph: {
-    title: "Eclipse — Developer & Community Operations",
-    description: "Developer building web experiences and working with online communities.",
+    title: "Eclipse — Developer",
+    description: "Developer building websites, web applications, and technical systems for online projects.",
     type: "website",
   },
 };
@@ -24,8 +26,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="flex flex-col min-h-screen">
+        <ScrollProgress />
         <Navbar />
-        <main className="flex-1 pt-16">{children}</main>
+        <main className="flex-1 pt-16">
+          <PageTransitionWrapper>
+            {children}
+          </PageTransitionWrapper>
+        </main>
         <Footer />
         <MusicPlayer />
       </body>

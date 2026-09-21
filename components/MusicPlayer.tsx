@@ -28,6 +28,26 @@ export default function MusicPlayer() {
   const [autoplayed, setAutoplayed] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
 
+  // Spacebar play/pause
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.code !== 'Space') return;
+      const tag = (e.target as HTMLElement).tagName.toLowerCase();
+      if (tag === 'input' || tag === 'textarea' || tag === 'select') return;
+      e.preventDefault();
+      if (!audioRef.current) return;
+      if (audioRef.current.paused) {
+        audioRef.current.play();
+        setIsPlaying(true);
+      } else {
+        audioRef.current.pause();
+        setIsPlaying(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
   const track = PLAYLIST[trackIndex];
 
   // Autoplay on first interaction
